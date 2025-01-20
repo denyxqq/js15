@@ -30,3 +30,9 @@ console.log(DimasFriends);
 
 
 // #4
+const skillsSort = friends.reduce((skill, friends) => {
+    skill.push(friends.skills);
+    skill.sort();
+    return(skill);
+},[])
+console.log(skillsSort);
