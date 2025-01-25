@@ -25,10 +25,13 @@ const DimasFriends = friends.reduce((names, friends) => {
 console.log(DimasFriends);
 
 // #3
-
-
-
-
+const copyFriends = [...friends];
+const FriendFilter = copyFriends.sort((CurrectFriend, NextFriend) => {
+    let frCrt = CurrectFriend.friend;
+    let frNext = NextFriend.friend;
+    return frCrt.length - frNext.length; 
+});
+console.log(FriendFilter);
 // #4
 const skillsSort = friends.reduce((skill, friends) => {
     skill.push(friends.skills);
